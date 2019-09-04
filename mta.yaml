@@ -1,0 +1,27 @@
+ID: EAD_AdventureWorks
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: HDB
+    type: hdb
+    path: HDB
+    requires:
+      - name: hdi_HDB
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: AdventureWorks
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: AdventureWorks_Grants
+          service: '~{adventureworks-ccs-service}'
+resources:
+  - name: hdi_HDB
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+  - name: AdventureWorks
+    parameters:
+      service-name: AdventureWorks
+    properties:
+      adventureworks-ccs-service: '${service-name}'
+    type: org.cloudfoundry.existing-service

@@ -1,0 +1,20 @@
+{
+  "EAD_AdventureWorks.HDB.synonyms::S_AW_Product": {
+    "target": {
+      "object": "VT_AW_Product",
+      "schema": "TA_01"
+    }
+  },
+  "EAD_AdventureWorks.HDB.synonyms::S_AW_ProductCategory": {
+    "target": {
+      "object": "VT_AW_ProductCategory",
+      "schema": "TA_01"
+    }
+  },
+  "EAD_AdventureWorks.HDB.synonyms::S_AW_ProductSubcategory": {
+    "target": {
+      "object": "VT_AW_ProductSubcategory",
+      "schema": "TA_01"
+    }
+  }
+}
