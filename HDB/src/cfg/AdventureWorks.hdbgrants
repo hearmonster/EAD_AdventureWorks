@@ -1,0 +1,14 @@
+{
+	"AdventureWorks-CCS": {
+		"object_owner": {
+			"roles": [
+				"GRANT_AW_REMOTE_SOURCE"
+			]
+		},
+		"application_user": {
+			"roles": [
+				"GRANT_AW_REMOTE_SOURCE"
+			]
+		}
+	}
+}

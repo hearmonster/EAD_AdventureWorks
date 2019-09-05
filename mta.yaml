@@ -14,6 +14,16 @@ modules:
         properties:
           key: AdventureWorks_Grants
           service: '~{adventureworks-ccs-service}'
+
+      - name: cross-container-service-1
+        group: SERVICE_REPLACEMENTS
+
+        properties:
+          key: ServiceName_1
+          service: ~{the-service-name}
+                            
+
+
 resources:
   - name: hdi_HDB
     properties:
@@ -25,3 +35,11 @@ resources:
     properties:
       adventureworks-ccs-service: '${service-name}'
     type: org.cloudfoundry.existing-service
+
+  - name: cross-container-service-1
+    parameters:
+       service-name: AdventureWorks-CCS
+    properties:
+       the-service-name: ${service-name}
+    type: org.cloudfoundry.existing-service
+

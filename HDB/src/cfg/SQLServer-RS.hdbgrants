@@ -1,0 +1,20 @@
+{
+  "AdventureWorks_Grants": { 
+    "object_owner" : {
+      "source_privileges":[
+        {
+          "reference":"SQLServer-AdventureWorksX",
+          "privileges_with_grant_option":["CREATE VIRTUAL TABLE"]
+        }
+      ]
+    },
+    "application_user" : {
+      "source_privileges":[
+        {
+          "reference":"SQLServer-AdventureWorks",
+          "privileges_with_grant_option":["CREATEX VIRTUAL TABLE"]
+        }
+      ]
+    }
+  }
+}
